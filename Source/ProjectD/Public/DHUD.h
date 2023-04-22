@@ -13,5 +13,14 @@ UCLASS()
 class PROJECTD_API ADHUD : public AHUD
 {
 	GENERATED_BODY()
-	
+
+public:
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> BaseHudClass;
+
+	UPROPERTY()
+	UUserWidget* BaseHud;
+
+protected:
+	virtual void BeginPlay() override;
 };

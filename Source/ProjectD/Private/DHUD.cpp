@@ -2,4 +2,18 @@
 
 
 #include "DHUD.h"
+#include "Blueprint/UserWidget.h"
 
+void ADHUD::BeginPlay()
+{
+	Super::BeginPlay();
+
+	if ( BaseHudClass )
+	{
+		BaseHud = CreateWidget(GetWorld(), BaseHudClass );
+		if ( BaseHud )
+		{
+			BaseHud->AddToViewport( 0 );
+		}
+	}
+}
