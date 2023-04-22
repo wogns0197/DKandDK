@@ -1,0 +1,4 @@
+*.opendb
+InterMediate/*
+Binaries/*
+.vs/*
