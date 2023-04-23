@@ -17,4 +17,14 @@ class PROJECTD_API UBaseHud : public UUserWidget
 public:
 	UPROPERTY(meta = (BindWidget))
 	class UTextBlock* Text_Money;
+
+public:
+	void AddMoney( int8 n );
+
+private:
+	const FString& GetMoneyText();
+
+private:
+	FString MoneyString;
+	int64 MoneyNum;
 };

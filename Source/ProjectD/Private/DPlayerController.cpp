@@ -3,3 +3,7 @@
 
 #include "DPlayerController.h"
 
+void ADPlayerController::BeginPlay()
+{
+	bShowMouseCursor = true;
+}

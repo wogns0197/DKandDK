@@ -14,4 +14,6 @@ class PROJECTD_API ADPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
+protected:
+	virtual void BeginPlay() override;
 };

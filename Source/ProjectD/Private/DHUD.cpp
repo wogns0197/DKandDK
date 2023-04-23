@@ -2,7 +2,6 @@
 
 
 #include "DHUD.h"
-#include "Blueprint/UserWidget.h"
 
 void ADHUD::BeginPlay()
 {

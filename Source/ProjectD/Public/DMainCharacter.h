@@ -23,4 +23,14 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+private:
+	UFUNCTION()
+	void OnClicked_Character( class AActor* TouchedActor, FKey ButtonPressed );
+
+private:
+	TWeakObjectPtr<class ADHUD> Hud;
+
+	UPROPERTY()
+	TWeakObjectPtr<class UBaseHud> BaseHudWidget;
+
 };

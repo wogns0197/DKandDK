@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/HUD.h"
+#include "Blueprint/UserWidget.h"
 #include "DHUD.generated.h"
 
 /**
@@ -19,8 +20,11 @@ public:
 	TSubclassOf<UUserWidget> BaseHudClass;
 
 	UPROPERTY()
-	UUserWidget* BaseHud;
+	class UUserWidget* BaseHud;
 
 protected:
 	virtual void BeginPlay() override;
+
+public:
+	TWeakObjectPtr<class UUserWidget> GetBaseHud() { return BaseHud; }
 };
